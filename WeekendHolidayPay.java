@@ -8,8 +8,8 @@ public class WeekendHolidayPay{
         int response;
        int saturdayOTHours;
         int sundayOThours;
-       // overtimeSaturday = saturdayOTHours * 1.5 * hourlyWage;
-       // overtimeSunday = sundayOThours * 2 * hourlyWage;
+        double overtimeSaturday;
+       double overtimeSunday;
         //totalPay = overtimeSaturday + overtimeSunday + (regularHours * hourlyWage);
 
 
@@ -27,20 +27,24 @@ public class WeekendHolidayPay{
                  }if (response == 1){
                          System.out.println("How many hours did you work?");
                         saturdayOTHours = keyboard.nextInt();
+                        overtimeSaturday = saturdayOTHours * 1.5 * hourlyWage;
+                       //  System.out.println("Your weekly pay for saturday is " + overtimeSaturday +  (regularHours * hourlyWage));
                         System.out.println("Did you work Sunday? Press 1 for YES 2 for NO");
-                        response = keyboard.nextInt();
-                            }if (response == 1){
-                            System.out.println("How many hours did you work?");
-                            sundayOThours = keyboard.nextInt();
-                            if (response == 2){
-                                System.out.println("Your regular hours and over time for saturday was " + regularHours * hourlyWage + saturdayOTHours * hourlyWage);
-                            }
-                //System.out.println("Your total pay is " + overtimeSaturday + " for saturday");
-                //System.out.println("Your total pay is " + overtimeSunday + " for sunday");
-                //System.out.println("Your total pay for the week is " + totalPay );
-             
-       } else if (response == 2) {
-            System.out.println("Your pay for your regular hours are" + regularHours * hourlyWage);
-        }     
+                     } if (response == 1) {
+                        System.out.println("How many hours did you work?");
+                        sundayOThours = keyboard.nextInt();
+                        overtimeSunday = sundayOThours * 2 * hourlyWage;
+                     } if (response == 2) {
+                        System.out.println("Your weekly pay for saturday is " + overtimeSaturday +  (regularHours * hourlyWage));
+                     }
+
+        
+        
+        
+        
+
+
+
+
     } // end of main
 } // end of class
